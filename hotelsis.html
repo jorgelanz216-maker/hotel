@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hotel — Panel</title>
+<link rel="manifest" href="/hotel/manifest.json">
+<meta name="theme-color" content="#4f46e5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hotel">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#f4f4f8;color:#1a1a2e;min-height:100vh}
@@ -716,5 +720,6 @@ function cm2(id){document.getElementById(id).style.display='none'}
 function bc(e,id){if(e.target.id===id)cm2(id)}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
 </script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/hotel/sw.js")}</script>
 </body>
 </html>
